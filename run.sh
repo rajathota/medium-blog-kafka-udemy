@@ -41,6 +41,13 @@ kafka-topics --create --topic udemy-reviews-fraud --partitions 3 --replication-f
 kafka-topics --create --topic long-term-stats --partitions 3 --replication-factor 1 --zookeeper localhost:2181
 kafka-topics --create --topic recent-stats --partitions 3 --replication-factor 1 --zookeeper localhost:2181
 
+# use these commands  [Thota]
+kafka-topics --create --topic udemy-reviews --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+kafka-topics --create --topic udemy-reviews-valid --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+kafka-topics --create --topic udemy-reviews-fraud --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+kafka-topics --create --topic long-term-stats --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+kafka-topics --create --topic recent-stats --partitions 3 --replication-factor 1 --bootstrap-server localhost:9092
+
 # Build and package the different project components (make sure you have maven installed)
 mvn clean package
 
