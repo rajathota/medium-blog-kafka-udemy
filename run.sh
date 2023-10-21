@@ -13,6 +13,17 @@ Installing Confluent Kafka on Windows | Setup Kafka cluster in WSL2 | Windows su
 https://www.youtube.com/watch?v=mdcIdzYHFlw
 
 curl -L --http1.1 https://cnfl.io/cli | sh -s -- -b $CONFLUENT_HOME/bin
+**** [Thota] updae the below values beofre stating the server in /home/ubantu/confluent-7.5.1/etc/kafka/server.properties
+
+listeners=PLAINTEXT://0.0.0.0:9092
+
+# Listener name, hostname and port the broker will advertise to clients.
+# If not set, it uses the value for "listeners".
+advertised.listeners=PLAINTEXT://localhost:9092
+
+# Maps listener names to security protocols, the default is for them to be the same. See the config documentation for more details
+listener.security.protocol.map=PLAINTEXT:PLAINTEXT,SSL:SSL,SASL_PLAINTEXT:SASL_PLAINTEXT,SASL_SSL:SASL_SSL
+
 
 confluent local services start
 
