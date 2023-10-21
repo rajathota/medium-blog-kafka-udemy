@@ -4,6 +4,14 @@
 
 # Download Confluent Platform 5.1.1 https://www.confluent.io/download/
 # Unzip and add confluent-5.1.1/bin to your PATH
+export CONFLUENT_HOME=<path-to-confluent>
+export PATH="${CONFLUENT_HOME}/bin:$PATH"
+
+download cli form https://github.com/confluentinc/cli/releases/tag/v3.39.0
+
+curl -L --http1.1 https://cnfl.io/cli | sh -s -- -b $CONFLUENT_HOME/windows/bin
+
+confluent local services start
 
 # Download and install Docker for Mac / Windows / Linux and do
 docker-compose up -d
