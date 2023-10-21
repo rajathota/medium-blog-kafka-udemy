@@ -7,9 +7,12 @@
 export CONFLUENT_HOME=<path-to-confluent>
 export PATH="${CONFLUENT_HOME}/bin:$PATH"
 
-download cli form https://github.com/confluentinc/cli/releases/tag/v3.39.0
+foolw the instruction to setup in windows linux sub systme configuration
+Installing Confluent Kafka on Windows | Setup Kafka cluster in WSL2 | Windows sub system for Linux
 
-curl -L --http1.1 https://cnfl.io/cli | sh -s -- -b $CONFLUENT_HOME/windows/bin
+https://www.youtube.com/watch?v=mdcIdzYHFlw
+
+curl -L --http1.1 https://cnfl.io/cli | sh -s -- -b $CONFLUENT_HOME/bin
 
 confluent local services start
 
